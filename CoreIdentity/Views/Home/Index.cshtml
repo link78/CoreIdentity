@@ -1,0 +1,30 @@
+﻿
+
+
+
+
+
+
+
+<div class="bg-primary panel-body"><h3>Welcome to App Identity Core Tutorial</h3></div>
+<a asp-action="Index" asp-controller="Account" class="btn btn-info">View Uers</a>
+<a asp-action="Register" asp-controller="Account" class="btn btn-info">Create new User</a>
+<a asp-action="Login" asp-controller="Account" class="btn btn-info">Login</a>
+<a asp-action="Index" asp-controller="RoleAdmin" class="btn btn-info">View new Role</a>
+<a asp-action="Create" asp-controller="RoleAdmin" class="btn btn-info">Create new role</a>
+<a asp-action="Edit" asp-controller="RoleAdmin" class="btn btn-info">Edit role</a>
+
+
+@if(User?.Identity?.IsAuthenticated?? false)
+{
+    <a asp-action="Logout" asp-controller="Account" class="btn btn-danger">Logout</a>
+
+}
+
+
+
+
+
+
+
+

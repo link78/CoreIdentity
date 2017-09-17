@@ -1,0 +1,32 @@
+﻿@model IEnumerable<IdentityRole> 
+ 
+
+
+<div class="bg-primary panel-body"> Roles</div>
+<table class="table table-condensed table-bordered table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Users</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var role in Model)
+    {
+        <tr>
+            <td>@role.Id</td>
+            <td>@role.Name</td>
+            <td identity-role="@role.Id"></td>
+            <td>
+                <form asp-action="Delete" asp-route-id="@role.Id" method="post">
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@role.Id">Edit</a>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+
+    }
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Create new Role</a>
+
+<a asp-action="Index" asp-controller="Home" class="btn btn-primary">Home Page</a>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/boostrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/boostrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="nav navbar navbar-brand" role="navigation">
+     <a asp-action="Login" asp-controller="Account" class="btn btn-default pull-right">Log in</a>
+     <a asp-action="Logout" asp-controller="Account" class="btn btn-default pull-right">Log out</a>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
